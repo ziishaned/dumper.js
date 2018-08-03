@@ -35,6 +35,14 @@
       "unix"
     ],
     "valid-typeof": 2,
-    "no-console": 1
+    "no-console": 1,
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    "no-unused-vars": 2,
+    "array-bracket-spacing": [ 2, "always" ]
   }
 }
