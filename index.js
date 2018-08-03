@@ -1,7 +1,3 @@
-class Hello {
-    greet() {
-        console.log('Hello');
-    }
-}
+let dd = require('./lib/dd');
 
-new Hello().greet();
+dd();
