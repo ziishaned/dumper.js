@@ -30,5 +30,8 @@
     "chai": "^3.3.0",
     "eslint": "^1.7.2",
     "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1"
   }
 }
