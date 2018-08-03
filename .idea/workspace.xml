@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b154c266-88c8-4914-8718-acf799b5a05e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dump.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dump.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,34 +44,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="eslintrc" value="20" />
-          <entry key="js" value="2623" />
+          <entry key="eslintrc" value="43" />
+          <entry key="js" value="2624" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="20" />
-          <entry key="JavaScript" value="2623" />
+          <entry key="JSON" value="43" />
+          <entry key="JavaScript" value="2624" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/dump.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="36" column="105" lean-forward="true" selection-start-line="36" selection-start-column="105" selection-end-line="36" selection-end-column="105" />
+            <state relative-caret-position="410">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.eslintrc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="368">
+              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -99,6 +98,7 @@
       <find>isUndefined</find>
       <find>isNull</find>
       <find>i</find>
+      <find>quote-props</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/lib/inspect.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/lib/dd.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/lib/dump.js" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
       </list>
     </option>
   </component>
@@ -201,12 +201,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533319544920</updated>
-      <workItem from="1533319547004" duration="9648000" />
+      <workItem from="1533319547004" duration="10085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9648000" />
+    <option name="totallyTimeSpent" value="10085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -214,14 +214,14 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Quokka" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" weight="0.32994062" />
       <window_info anchor="bottom" id="RNConsole" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49928367" weight="0.38428324" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.502149" side_tool="true" weight="0.3298791" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49928367" visible="true" weight="0.38428324" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5007163" side_tool="true" weight="0.38428324" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497851" weight="0.3298791" />
@@ -323,17 +323,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
+    <entry file="file://$PROJECT_DIR$/lib/dump.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        <state relative-caret-position="410">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dump.js">
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="36" column="105" lean-forward="true" selection-start-line="36" selection-start-column="105" selection-end-line="36" selection-end-column="105" />
+        <state relative-caret-position="368">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
         </state>
       </provider>
     </entry>

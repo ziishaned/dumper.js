@@ -43,6 +43,11 @@
       }
     ],
     "no-unused-vars": 2,
-    "array-bracket-spacing": [ 2, "always" ]
+    "prefer-spread": 1,
+    "prefer-template": 1,
+    "quote-props": [
+      2,
+      "as-needed"
+    ]
   }
 }
