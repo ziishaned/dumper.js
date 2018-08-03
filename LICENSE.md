@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright (c) 2015 Sebastian De Deyne <sebastian@spatie.be>
+Copyright (c) 2018 :Zeeshan Ahmad <ziishaned@gmail.com>
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
