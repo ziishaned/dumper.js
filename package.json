@@ -1,17 +1,17 @@
 {
-  "name": "dump-die",
-  "version": "1.0.0",
+  "name": "dd",
+  "version": "0.0.1",
   "description": "Dump an object and kill the process in node.js",
   "main": "lib/dd.js",
   "scripts": {
     "test": "eslint . && mocha test"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spatie/dump-die.git"
+    "url": "git+https://github.com/zeeshanu/dd.git"
   },
   "keywords": [
     "dump",
@@ -20,16 +20,16 @@
     "dd",
     "laravel"
   ],
-  "author": "Sebastian De Deyne",
+  "author": "Zeeshan Ahmad",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spatie/dump-die/issues"
+    "url": "https://github.com/zeeshanu/dd/issues"
   },
-  "homepage": "https://github.com/spatie/dump-die#readme",
+  "homepage": "https://github.com/zeeshanu/dd#readme",
   "devDependencies": {
-    "chai": "^3.3.0",
-    "eslint": "^1.7.2",
-    "mocha": "^2.3.3"
+    "chai": "^4.1.2",
+    "eslint": "^5.2.0",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "caller-id": "^0.1.0",
