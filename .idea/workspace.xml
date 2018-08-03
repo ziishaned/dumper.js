@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b154c266-88c8-4914-8718-acf799b5a05e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zeeshan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zeeshan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,35 +27,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="eslintrc" value="11" />
-          <entry key="js" value="29" />
+          <entry key="eslintrc" value="13" />
+          <entry key="js" value="38" />
           <entry key="json" value="3" />
           <entry key="md" value="2" />
+          <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="29" />
+          <entry key="JSON" value="16" />
+          <entry key="JavaScript" value="38" />
           <entry key="Markdown" value="2" />
+          <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
           <entry key="ESLintLanguageService" value="1" />
           <entry key="LanguageService" value="1" />
+          <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="eslintrc" value="43" />
-          <entry key="js" value="2657" />
+          <entry key="eslintrc" value="44" />
+          <entry key="js" value="3925" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="43" />
-          <entry key="JavaScript" value="2657" />
+          <entry key="JSON" value="44" />
+          <entry key="JavaScript" value="3925" />
         </counts>
       </usages-collector>
     </session>
@@ -60,10 +66,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/dd.js">
+        <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="512">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -94,6 +100,8 @@
       <find>isNull</find>
       <find>i</find>
       <find>quote-props</find>
+      <find>quote</find>
+      <find>isString</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,10 +111,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/inspect.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/lib/dump.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/lib/dd.js" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/test/test.js" />
       </list>
     </option>
   </component>
@@ -152,7 +161,7 @@
             <path>
               <item name="dd" type="b2602c69:ProjectViewProjectNode" />
               <item name="dd" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,11 +177,13 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -186,6 +197,99 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Mocha.dump.should return false if argument type is not string">
+    <configuration name="dump.should return false if argument type is not regexp" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/test.js</test-file>
+      <test-names>
+        <name value="dump" />
+        <name value="should return false if argument type is not regexp" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="dump.should return false if argument type is not string" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/test.js</test-file>
+      <test-names>
+        <name value="dump" />
+        <name value="should return false if argument type is not string" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="dump.should return true if argument type is html" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/test.js</test-file>
+      <test-names>
+        <name value="dump" />
+        <name value="should return true if argument type is html" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="dump.should return true if argument type is regexp" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/test.js</test-file>
+      <test-names>
+        <name value="dump" />
+        <name value="should return true if argument type is regexp" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="dump.should return true if argument type is string" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/test.js</test-file>
+      <test-names>
+        <name value="dump" />
+        <name value="should return true if argument type is string" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Mocha.dump.should return true if argument type is regexp" />
+      <item itemvalue="Mocha.dump.should return false if argument type is not regexp" />
+      <item itemvalue="Mocha.dump.should return true if argument type is html" />
+      <item itemvalue="Mocha.dump.should return true if argument type is string" />
+      <item itemvalue="Mocha.dump.should return false if argument type is not string" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.dump.should return false if argument type is not string" />
+        <item itemvalue="Mocha.dump.should return true if argument type is string" />
+        <item itemvalue="Mocha.dump.should return true if argument type is html" />
+        <item itemvalue="Mocha.dump.should return false if argument type is not regexp" />
+        <item itemvalue="Mocha.dump.should return true if argument type is regexp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -196,12 +300,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533319544920</updated>
-      <workItem from="1533319547004" duration="10256000" />
+      <workItem from="1533319547004" duration="12755000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="dump_should_return_true_if_argument_type_is_null - 2018.08.04 at 02h 12m 55s.xml">
+      <configuration name="dump.should return true if argument type is null" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_false_if_argument_type_is_not_null - 2018.08.04 at 02h 13m 17s.xml">
+      <configuration name="dump.should return false if argument type is not null" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_true_if_argument_type_is_object - 2018.08.04 at 02h 13m 45s.xml">
+      <configuration name="dump.should return true if argument type is object" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_false_if_argument_type_is_not_object - 2018.08.04 at 02h 14m 03s.xml">
+      <configuration name="dump.should return false if argument type is not object" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_true_if_argument_type_is_regexp - 2018.08.04 at 02h 14m 44s.xml">
+      <configuration name="dump.should return true if argument type is regexp" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_false_if_argument_type_is_not_regexp - 2018.08.04 at 02h 15m 02s.xml">
+      <configuration name="dump.should return false if argument type is not regexp" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_true_if_argument_type_is_html - 2018.08.04 at 02h 15m 38s.xml">
+      <configuration name="dump.should return true if argument type is html" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_true_if_argument_type_is_html - 2018.08.04 at 02h 17m 41s.xml">
+      <configuration name="dump.should return true if argument type is html" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_true_if_argument_type_is_string - 2018.08.04 at 02h 20m 31s.xml">
+      <configuration name="dump.should return true if argument type is string" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="dump_should_return_false_if_argument_type_is_not_string - 2018.08.04 at 02h 20m 47s.xml">
+      <configuration name="dump.should return false if argument type is not string" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10256000" />
+    <option name="totallyTimeSpent" value="12755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -211,6 +347,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Quokka" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" weight="0.32994062" />
@@ -219,7 +356,7 @@
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5007163" side_tool="true" weight="0.38428324" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497851" weight="0.3298791" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497851" weight="0.32909244" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -304,31 +441,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/test/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="160">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/jest/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dump.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="233" column="29" selection-start-line="233" selection-start-column="29" selection-end-line="233" selection-end-column="29" />
+        <state relative-caret-position="172">
+          <caret line="308" column="14" selection-start-line="308" selection-start-column="14" selection-end-line="308" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="288">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/chai/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="646" column="11" lean-forward="true" selection-start-line="646" selection-start-column="11" selection-end-line="646" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dump.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="199" column="37" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
