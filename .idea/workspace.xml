@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b154c266-88c8-4914-8718-acf799b5a05e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dd.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dump.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dump.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,16 +24,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="eslintrc" value="6" />
-          <entry key="js" value="8" />
+          <entry key="eslintrc" value="7" />
+          <entry key="js" value="9" />
           <entry key="json" value="3" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JSON" value="10" />
+          <entry key="JavaScript" value="9" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
@@ -63,10 +60,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/dd.js">
+        <entry file="file://$PROJECT_DIR$/lib/dump.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -78,6 +75,7 @@
       <find>env</find>
       <find>keyword-spacing</find>
       <find>semi</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,9 +86,9 @@
       <list>
         <option value="$PROJECT_DIR$/lib/inspect.js" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/lib/dump.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/lib/dd.js" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/lib/dump.js" />
       </list>
     </option>
   </component>
@@ -180,12 +178,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533319544920</updated>
-      <workItem from="1533319547004" duration="1269000" />
+      <workItem from="1533319547004" duration="1299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1269000" />
+    <option name="totallyTimeSpent" value="1299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -271,13 +269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dump.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -285,17 +276,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
+    <entry file="file://$PROJECT_DIR$/lib/dd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dd.js">
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dump.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
