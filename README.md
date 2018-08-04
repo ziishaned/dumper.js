@@ -1,11 +1,35 @@
-# Dump - Die
+<div align="center">
+	<img src="https://i.imgur.com/JgbF61K.png" alt="dd() - Dump information about a variable">
+	<br/><br/>
+	<a href="https://travis-ci.org/zeeshanu/git-profile">
+		<img src="https://img.shields.io/travis/zeeshanu/git-profile/master.svg?style=flat-square" alt="Build Status">
+	</a>
+	<a href="#">
+		<img src="https://img.shields.io/teamcity/coverage/bt428.svg?style=flat-square" alt="TeamCity CodeBetter Coverage">
+	</a>
+	<a href="https://github.com/zeeshanu/git-profile/releases">
+		<img src="https://img.shields.io/github/release/zeeshanu/git-profile.svg?style=flat-square" alt="Latest Version">
+	</a>
+	<a href="#">
+		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
+	</a>
+	<br/><br/>
+</div>
 
-Dump an object and kill the process in node.js for quick debugging.
+> `DD` is a better formatted alternative to JS's `console.log` functions. Dump an object and kill the process in node.js for quick debugging.
 
 ## Installation
 
+Compatibility: `dd` requires Node >=6.0.0. It works best with Node >=10.
+
 ```bash
-npm install dd
+npm install dd --save
+```
+
+or 
+
+```bash
+yarn add dd
 ```
 
 ## Usage
@@ -24,13 +48,23 @@ const users = [
 dd(users);
 ```
 
-Outputs:
+### Outputs:
 
 ![dd](https://i.imgur.com/8eYdVN0.png)
 
-## Testing
+## Windows
 
-You can run the tests (ESLint & Mocha) with:
+If you're on Windows, do yourself a favor and use [`cmder`](http://cmder.net/) instead of `cmd.exe`.
+
+## Test
+
+To execute tests for the library, install the project dependencies once:
+
+```bash
+npm install
+```
+
+Then, the tests can be executed:
 
 ```bash
 npm run test
@@ -38,4 +72,4 @@ npm run test
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+MIT © Zeeshan Ahmed <ziishaned@gmail.com>. Please see [License File](LICENSE.md) for more information.
