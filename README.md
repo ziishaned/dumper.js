@@ -30,6 +30,8 @@ yarn add dd
 
 ## Usage
 
+### Example
+
 Calling `dd` will print the object in your terminal and kill the process.
 
 ```js
@@ -46,17 +48,25 @@ dd(users);
 
 ### Outputs:
 
-![dd](https://i.imgur.com/8eYdVN0.png)
+![dd1](https://i.imgur.com/8eYdVN0.png)
 
-If you want to print multiple objects at a time call `dd()` function like this:
+### Example 
+
+If you want to print multiple objects at once call `dd()` function like this:
 
 ```js
+const dd = require('dd');
 
+let baz = true;
+let foo = ['a', 'b', 'c', 'a', 'b', 'c'];
+let bar = [{ x: 1 }, { x: 2 }, { x: 3 }, { x: 1 }];
+
+dd({foo, bar, baz});
 ```
 
-## Windows
+### Outputs:
 
-If you're on Windows, do yourself a favor and use [`cmder`](http://cmder.net/) instead of `cmd.exe`.
+![dd2](https://i.imgur.com/XWeoEni.png)
 
 ## Test
 

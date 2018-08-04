@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b154c266-88c8-4914-8718-acf799b5a05e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,9 +31,9 @@
           <entry key="editorconfig" value="2" />
           <entry key="eslintrc" value="16" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="48" />
+          <entry key="js" value="49" />
           <entry key="json" value="6" />
-          <entry key="md" value="13" />
+          <entry key="md" value="14" />
           <entry key="ts" value="2" />
           <entry key="yml" value="2" />
         </counts>
@@ -43,8 +42,8 @@
         <counts>
           <entry key="Git file" value="1" />
           <entry key="JSON" value="22" />
-          <entry key="JavaScript" value="48" />
-          <entry key="Markdown" value="13" />
+          <entry key="JavaScript" value="49" />
+          <entry key="Markdown" value="14" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="2" />
           <entry key="YAML" value="2" />
@@ -65,7 +64,7 @@
           <entry key="gitignore" value="7" />
           <entry key="js" value="4048" />
           <entry key="json" value="84" />
-          <entry key="md" value="223" />
+          <entry key="md" value="296" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -73,24 +72,14 @@
           <entry key="Git file" value="7" />
           <entry key="JSON" value="128" />
           <entry key="JavaScript" value="4048" />
-          <entry key="Markdown" value="223" />
+          <entry key="Markdown" value="296" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -138,8 +127,8 @@
         <option value="$PROJECT_DIR$/lib/dump.js" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -323,7 +312,7 @@
       <workItem from="1533319547004" duration="12917000" />
       <workItem from="1533336299910" duration="550000" />
       <workItem from="1533375630273" duration="131000" />
-      <workItem from="1533380306543" duration="1633000" />
+      <workItem from="1533380306543" duration="1890000" />
     </task>
     <servers />
   </component>
@@ -360,13 +349,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15231000" />
+    <option name="totallyTimeSpent" value="15488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="996" height="1200" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -533,20 +521,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="501">
-            <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <caret line="6" column="20" lean-forward="true" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="480">
+            <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
