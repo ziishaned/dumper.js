@@ -6,7 +6,6 @@
   "scripts": {
     "test": "eslint . && mocha test"
   },
-  "precommit": "test",
   "engines": {
     "node": ">=6.0.0"
   },
