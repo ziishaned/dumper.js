@@ -1,2 +1,14 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+.DS_Store
+
 /node_modules
+
 /index.js
