@@ -48,6 +48,12 @@ dd(users);
 
 ![dd](https://i.imgur.com/8eYdVN0.png)
 
+If you want to print multiple objects at a time call `dd()` function like this:
+
+```js
+
+```
+
 ## Windows
 
 If you're on Windows, do yourself a favor and use [`cmder`](http://cmder.net/) instead of `cmd.exe`.
