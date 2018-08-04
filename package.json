@@ -6,6 +6,7 @@
   "scripts": {
     "test": "eslint . && mocha test"
   },
+  "precommit": "test",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -14,13 +15,12 @@
     "url": "git+https://github.com/zeeshanu/dd.git"
   },
   "keywords": [
+    "dd",
     "dump",
     "debug",
-    "console",
-    "dd",
-    "laravel"
+    "console"
   ],
-  "author": "Zeeshan Ahmad",
+  "author": "Zeeshan Ahmad <ziishaned@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zeeshanu/dd/issues"
