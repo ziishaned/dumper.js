@@ -23,12 +23,8 @@
 Compatibility: `dd` requires Node >=6.0.0. It works best with Node >=10.
 
 ```bash
-npm install dd --save
-```
-
-or 
-
-```bash
+npm install --save dd 
+# or
 yarn add dd
 ```
 
@@ -72,4 +68,6 @@ npm run test
 
 ## License
 
-MIT © Zeeshan Ahmed <ziishaned@gmail.com>. Please see [License File](LICENSE.md) for more information.
+`dd` is released under the MIT license.
+
+Copyright © Zeeshan Ahmed <ziishaned@gmail.com>. Please see [License File](LICENSE.md) for more information.
