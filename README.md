@@ -84,6 +84,4 @@ npm run test
 
 ## License
 
-`dd` is released under the MIT license.
-
 Copyright © Zeeshan Ahmed <ziishaned@gmail.com>. Please see [License File](LICENSE.md) for more information.
