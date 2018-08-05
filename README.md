@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="./logo.png" height="180" alt="Dumper.js - Dumps information about a variable">
+	<img src="https://raw.githubusercontent.com/zeeshanu/dumper.js/master/logo.svg" height="180" alt="Dumper.js - Dumps information about a variable">
 	<br/><br/>
 	<a href="https://travis-ci.org/zeeshanu/git-profile">
 		<img src="https://img.shields.io/travis/zeeshanu/git-profile/master.svg?style=flat-square" alt="Build Status">
