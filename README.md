@@ -4,10 +4,10 @@
 	<a href="https://travis-ci.org/zeeshanu/dumper.js">
 		<img src="https://img.shields.io/travis/zeeshanu/dumper.js/master.svg?style=flat-square" alt="Build Status">
 	</a>
-	<a href="#">
-		<img src="https://img.shields.io/teamcity/coverage/bt428.svg?style=flat-square" alt="TeamCity CodeBetter Coverage">
+	<a href="https://github.com/zeeshanu/dumper.js">
+		<img src="https://img.shields.io/codecov/c/github/zeeshanu/dumper.js.svg?style=flat-square" alt="Codecov">
 	</a>
-	<a href="https://github.com/zeeshanu/git-profile/releases">
+	<a href="https://github.com/zeeshanu/dumper.js/releases">
 		<img src="https://img.shields.io/github/release/zeeshanu/git-profile.svg?style=flat-square" alt="Latest Version">
 	</a>
 	<a href="#">
