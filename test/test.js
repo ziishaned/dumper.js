@@ -38,6 +38,41 @@ describe('Dump class tests', () => {
     });
   });
 
+  it('can dump regex values', () => {
+    assert.equal(generateDump(/[0-9]+/), ' /[0-9]+/');
+  });
+
+  it('can dump function values inside object', () => {
+    const users = [
+      {user: 'barney', age: 36, active: true, getAge: () => this.age},
+      {user: 'fred', age: 40, active: false, getAge: () => this.age},
+      {user: 'pebbles', age: 1, active: true, getAge: () => this.age},
+    ];
+
+    const expectedOutput = `array (size=3) [
+    [0] =>  object (size=4) {
+        'user' => string "barney" (length=6),
+        'age' => int 36,
+        'active' => boolean true,
+        'getAge' =>  function () {},
+    },
+    [1] =>  object (size=4) {
+        'user' => string "fred" (length=4),
+        'age' => int 40,
+        'active' => boolean false,
+        'getAge' =>  function () {},
+    },
+    [2] =>  object (size=4) {
+        'user' => string "pebbles" (length=7),
+        'age' => int 1,
+        'active' => boolean true,
+        'getAge' =>  function () {},
+    },
+]`;
+
+    assert.equal(generateDump(users), expectedOutput);
+  });
+
   it('can dump null/undefined values', () => {
     assert.equal(generateDump(null), ' null');
     assert.equal(generateDump(undefined), ' undefined');
