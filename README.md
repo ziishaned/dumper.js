@@ -20,25 +20,15 @@
 
 ## Installation
 
-Install it using `npm`
-
 ```bash
 npm install --save dumper.js
+# or you may use yarn
+yarn add dumper.js
 ```
-
-Or you may use yarn
-
-```bash
-yarn add dd
-```
-
-![](https://i.imgur.com/tw5YhNs.png)
 
 ## Usage
 
-There are two methods in the library
-
-### `dd()` – Dump and Die
+### `dd()` Dump and Die
 
 Calling `dd()` prints the output and kills the process
 
@@ -61,7 +51,7 @@ Will output below result and kill the process
 
 ![dd1](https://i.imgur.com/8eYdVN0.png)
 
-### `dump()` – Dump and Continue
+### `dump()` Dump and Continue
 
 Calling `dump()` prints the output and continues with the processing
 
