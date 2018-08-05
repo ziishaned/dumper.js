@@ -54,7 +54,7 @@ Will output below result and kill the process
 Calling `dump()` prints the output and continues with the processing
 
 ```javascript
-const dump = require('dumper.js').dump;
+const dump = require('dumper.js/src/dump');
 
 const users = [
     { user: 'barney', age: 36, active: true, createdAt: new Date(), getAge: () => this.age },
