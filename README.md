@@ -1,6 +1,8 @@
-<div align="center">
-	<img src="https://cdn.rawgit.com/zeeshanu/dumper.js/master/logo.svg" height="180" alt="Dumper.js - Dumps information about a variable">
-	<br/><br/>
+<h1 align="center">
+	<img height="150" src="https://cdn.rawgit.com/zeeshanu/dumper.js/master/logo.svg" alt="Dumper.js - Dumps information about a variable" />
+	<br> Dumper.js
+</h1>
+<p align="center">
 	<a href="https://travis-ci.org/zeeshanu/dumper.js">
 		<img src="https://img.shields.io/travis/zeeshanu/dumper.js/master.svg?style=flat-square" alt="Build Status">
 	</a>
@@ -10,10 +12,9 @@
 	<a href="#">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
 	</a>
-	<br/><br/>
-</div>
+</p>
 
-> `dumper.js` is a better and pretty variable inspector for your Node applications.
+<p align="center"><code>dumper.js</code> is a better and pretty variable inspector for your Node.js applications.</p>
 
 ## Installation
 
