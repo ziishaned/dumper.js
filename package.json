@@ -1,20 +1,19 @@
 {
-  "name": "dd",
+  "name": "dumper.js",
   "version": "0.0.1",
   "description": "Dump an object and kill the process in node.js",
-  "main": "lib/dd.js",
+  "main": "src/dd.js",
   "scripts": {
-    "test": "eslint . && mocha test"
-  },
-  "engines": {
-    "node": ">=6.0.0"
+    "test": "eslint . && mocha test",
+    "prettier": "prettier --write src/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeeshanu/dd.git"
+    "url": "git+https://github.com/zeeshanu/dumper.js.git"
   },
   "keywords": [
     "dd",
+    "dumper",
     "dump",
     "debug",
     "console"
@@ -22,9 +21,9 @@
   "author": "Zeeshan Ahmad <ziishaned@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zeeshanu/dd/issues"
+    "url": "https://github.com/zeeshanu/dumper.js/issues"
   },
-  "homepage": "https://github.com/zeeshanu/dd#readme",
+  "homepage": "https://github.com/zeeshanu/dumper.js#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^5.2.0",
@@ -33,6 +32,7 @@
   },
   "dependencies": {
     "caller-id": "^0.1.0",
+    "kind-of": "^6.0.2",
     "kleur": "^2.0.1"
   }
 }

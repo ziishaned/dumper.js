@@ -16,26 +16,34 @@
 	<br/><br/>
 </div>
 
-> `DD` is a better formatted alternative to JS's `console.log` functions. Dump an object and kill the process in node.js for quick debugging.
+> `dumper.js` is a better and pretty variable inspector for your Node applications.
 
 ## Installation
 
-Compatibility: `dd` requires Node >=6.0.0. It works best with Node >=10.
+Install it using `npm`
 
 ```bash
-npm install --save dd 
-# or
+npm install --save dumper.js
+```
+
+Or you may use yarn
+
+```bash
 yarn add dd
 ```
 
+![](https://i.imgur.com/tw5YhNs.png)
+
 ## Usage
 
-### Example
+There are two methods in the library
 
-Calling `dd` will print the object in your terminal and kill the process.
+### `dd()` – Dump and Die
+
+Calling `dd()` prints the output and kills the process
 
 ```js
-const dd = require('dd');
+const dd = require('dumper.js');
 
 const users = [
     { user: 'barney', age: 36, active: true, createdAt: new Date(), getAge: () => this.age },
@@ -44,44 +52,42 @@ const users = [
 ];
 
 dd(users);
+
+// Above variable will be printed
+console.log('this will never be called');
 ```
 
-### Outputs:
+Will output below result and kill the process
 
 ![dd1](https://i.imgur.com/8eYdVN0.png)
 
-### Example 
+### `dump()` – Dump and Continue
 
-If you want to print multiple objects at once call `dd()` function like this:
+Calling `dump()` prints the output and continues with the processing
 
-```js
-const dd = require('dd');
+```javascript
+const dump = require('dumper.js').dump;
 
-let baz = true;
-let foo = ['a', 'b', 'c', 'a', 'b', 'c'];
-let bar = [{ x: 1 }, { x: 2 }, { x: 3 }, { x: 1 }];
+const users = [
+    { user: 'barney', age: 36, active: true, createdAt: new Date(), getAge: () => this.age },
+    { user: 'fred', age: 40, active: false, createdAt: new Date(), getAge: () => this.age },
+    { user: 'pebbles', age: 1, active: true, createdAt: new Date(), getAge: () => this.age }
+];
 
-dd({foo, bar, baz});
+dump(users);
+
+// Above variable will be printed and process will continue
+console.log('this *will* be called');
 ```
 
-### Outputs:
+Will output below result and continue processing
 
-![dd2](https://i.imgur.com/XWeoEni.png)
+![dd1](https://i.imgur.com/8eYdVN0.png)
 
-## Test
+## Contributions
 
-To execute tests for the library, install the project dependencies once:
-
-```bash
-npm install
-```
-
-Then, the tests can be executed:
-
-```bash
-npm run test
-```
+Feel free to submit pull requests, create issues or spread the word.
 
 ## License
 
-Copyright © Zeeshan Ahmed <ziishaned@gmail.com>. Please see [License File](LICENSE.md) for more information.
+MIT &copy; [Zeeshan Ahmed](https://twitter.com/zeeshanu)

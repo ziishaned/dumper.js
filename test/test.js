@@ -1,129 +1,99 @@
 /* eslint-disable no-console */
 const assert = require('chai').assert;
 
-const Dump = require('../lib/dump');
+const Dumper = require('../src/dumper');
 
 describe('Dump class tests', () => {
-    let users = [];
-    let dump = new Dump();
+  function generateDump(item) {
+    const dumper = new Dumper();
+    return dumper.generateDump(item).replace(/\u001b\[.*?m/g, '');
+  }
 
-    beforeEach(() => {
-        dump = new Dump();
-        users = [
-            { user: 'barney', age: 36, active: true, createdAt: new Date(), getAge: () => this.age },
-            { user: 'fred', age: 40, active: false, createdAt: new Date(), getAge: () => this.age },
-            { user: 'pebbles', age: 1, active: true, createdAt: new Date(), getAge: () => this.age }
-        ];
+  it('can dump strings', () => {
+    const stringsToTest = [
+      'list of strings',
+      '',
+      ' ',
+    ];
 
+    stringsToTest.forEach((toTest) => {
+      const actualDump = generateDump(toTest);
+      const expectedDump = `string "${toTest}" (length=${toTest.length})`;
+
+      assert.equal(actualDump, expectedDump);
     });
+  });
 
-    it('should dump the provided object', () => {
-        let dumpOutput = dump.start(users);
-        assert.typeOf(dumpOutput, 'string');
-    });
+  it('can dump boolean values', () => {
+    assert.equal(generateDump(true), 'boolean true');
+    assert.equal(generateDump(false), 'boolean false');
+  });
 
-    it('should return true if argument type is undefined', () => {
-        let expected = dump.isUndefined(users[0].username);
-        assert.equal(expected, true);
-    });
+  it('can dump numeric values', () => {
+    const numbers = [23, 2, 0, 11.1, -1, -12.2, -9.22, -0.9];
 
-    it('should return false if argument type is not undefined', () => {
-        let expected = dump.isUndefined(users[0].user);
-        assert.equal(expected, false);
+    numbers.forEach(number => {
+      const type = Number.isInteger(number) ? 'int' : 'float';
+      assert.equal(generateDump(number), `${type} ${number}`);
     });
+  });
 
-    it('should return true if argument type is number', () => {
-        let expected = dump.isNumber(users[0].age);
-        assert.equal(expected, true);
-    });
+  it('can dump null/undefined values', () => {
+    assert.equal(generateDump(null), ' null');
+    assert.equal(generateDump(undefined), ' undefined');
+  });
 
-    it('should return false if argument type is not number', () => {
-        let expected = dump.isNumber(users[0].user);
-        assert.equal(expected, false);
-    });
+  it('can dump array values', () => {
+    const weekdays = [
+      'sunday',
+      'monday',
+      1,
+      true,
+      'tuesday',
+      'wednesday',
+      'thursday',
+      'friday',
+      'saturday',
+      null,
+      false,
+    ];
 
-    it('should return type of the provided argument', () => {
-        let expected = dump.getType(users[0].user);
-        assert.equal(expected, 'string');
-    });
+    const expectedOutput = `array (size=11) [
+    [0] => string "sunday" (length=6),
+    [1] => string "monday" (length=6),
+    [2] => int 1,
+    [3] => boolean true,
+    [4] => string "tuesday" (length=7),
+    [5] => string "wednesday" (length=9),
+    [6] => string "thursday" (length=8),
+    [7] => string "friday" (length=6),
+    [8] => string "saturday" (length=8),
+    [9] =>  null,
+    [10] => boolean false,
+]`;
 
-    it('should return true if argument type is array', () => {
-        let expected = dump.isArray(users);
-        assert.equal(expected, true);
-    });
+    assert.equal(generateDump(weekdays), expectedOutput);
+  });
 
-    it('should return false if argument type is not array', () => {
-        let expected = dump.isArray(users[0]);
-        assert.equal(expected, false);
-    });
+  it('can dump object values', () => {
+    const carDetails = {
+      color: 'red',
+      wheels: 4,
+      engine: {
+        cylinders: 4,
+        size: 2.2,
+      },
+    };
 
-    it('should return true if argument type is boolean', () => {
-        let expected = dump.isBoolean(users[0].active);
-        assert.equal(expected, true);
-    });
+    const expectedOutput = `object (size=3) {
+    'color' => string "red" (length=3),
+    'wheels' => int 4,
+    'engine' =>  object (size=2) {
+        'cylinders' => int 4,
+        'size' => float 2.2,
+    },
+}`;
 
-    it('should return false if argument type is not boolean', () => {
-        let expected = dump.isBoolean(users[0].age);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is date', () => {
-        let expected = dump.isDate(users[0].createdAt);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not date', () => {
-        let expected = dump.isDate(users[0].age);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is function', () => {
-        let expected = dump.isFunction(users[0].getAge);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not function', () => {
-        let expected = dump.isFunction(users[0]);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is null', () => {
-        let expected = dump.isNull(null);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not null', () => {
-        let expected = dump.isNull(users[0]);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is object', () => {
-        let expected = dump.isObject(users[0]);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not object', () => {
-        let expected = dump.isObject(users[0].age);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is regexp', () => {
-        let expected = dump.isRegExp(/[0-9]+/);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not regexp', () => {
-        let expected = dump.isRegExp(users[0].age);
-        assert.equal(expected, false);
-    });
-
-    it('should return true if argument type is string', () => {
-        let expected = dump.isString(users[0].user);
-        assert.equal(expected, true);
-    });
-
-    it('should return false if argument type is not string', () => {
-        let expected = dump.isString(users[0].age);
-        assert.equal(expected, false);
-    });
+    assert.equal(generateDump(carDetails), expectedOutput);
+  });
 });
