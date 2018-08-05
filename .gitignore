@@ -12,3 +12,5 @@ pids
 /node_modules
 
 /index.js
+
+.idea
