@@ -47,7 +47,7 @@ console.log('this will never be called');
 
 Will output below result and kill the process
 
-![dd1](https://i.imgur.com/8eYdVN0.png)
+![dd](https://i.imgur.com/iKIel4s.png)
 
 ### `dump()` Dump and Continue
 
@@ -65,12 +65,12 @@ const users = [
 dump(users);
 
 // Above variable will be printed and process will continue
-console.log('this *will* be called');
+console.log('this will be called');
 ```
 
 Will output below result and continue processing
 
-![dd1](https://i.imgur.com/8eYdVN0.png)
+![dump](https://i.imgur.com/x048cf6.png)
 
 ## Contributions
 
