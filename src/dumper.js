@@ -34,9 +34,7 @@ class Dumper {
         endWith = `${indent}]`;
         break;
       case 'object':
-        startWith = `${black.bold('object')} (size=${
-          Object.keys(toDump).length
-        }) {\n`;
+        startWith = `${black.bold('object')} (size=${Object.keys(toDump).length}) {\n`;
         endWith = `${indent}}`;
         break;
       default:
@@ -54,12 +52,7 @@ class Dumper {
       const originalParamType = kindOf(originalValue);
       const valueDump = this.prepareValueDump(indent, originalValue);
 
-      dump += this.makeArrowString(
-        originalParamType,
-        indent,
-        itemKey,
-        valueDump
-      );
+      dump += this.makeArrowString(originalParamType, indent, itemKey, valueDump);
     }
 
     return startWith + dump + endWith;
@@ -81,10 +74,7 @@ class Dumper {
       case 'array':
       case 'object':
         displayType = '';
-        displayValue = this.generateDump(
-          originalValue,
-          `${indent}${this.spaces}`
-        );
+        displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
         break;
       case 'boolean':
         displayType = 'boolean';
@@ -92,9 +82,7 @@ class Dumper {
         break;
       case 'string':
         displayType = 'string';
-        displayValue = `${red(`"${originalValue}"`)} (length=${
-          originalValue.length
-        })`;
+        displayValue = `${red(`"${originalValue}"`)} (length=${originalValue.length})`;
         break;
       case 'null':
         displayValue = `${blue('null')}`;
