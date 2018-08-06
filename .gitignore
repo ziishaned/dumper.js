@@ -11,7 +11,5 @@ pids
 
 /node_modules
 
-/index.js
-
 /coverage
 .idea
