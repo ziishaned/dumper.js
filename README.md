@@ -19,7 +19,7 @@
 ## Installation
 
 ```bash
-npm install --save dumper.js
+npm install --save-dev dumper.js
 # or you may use yarn
 yarn add dumper.js
 ```
