@@ -21,7 +21,7 @@
 ```bash
 npm install --save-dev dumper.js
 # or you may use yarn
-yarn add dumper.js
+yarn add dumper.js --dev
 ```
 
 ## Usage
