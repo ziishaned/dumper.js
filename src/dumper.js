@@ -66,46 +66,45 @@ class Dumper {
    * @return {*|string}
    */
   prepareValueDump(indent, originalValue) {
-    let displayType = '';
-    let displayValue = '';
-
     const paramType = kindOf(originalValue);
-    switch (paramType) {
-      case 'array':
-      case 'object':
-        displayType = '';
-        displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
-        break;
-      case 'boolean':
-        displayType = 'boolean';
-        displayValue = originalValue ? magenta('true') : magenta('false');
-        break;
-      case 'string':
-        displayType = 'string';
-        displayValue = `${red(`"${originalValue}"`)} (length=${originalValue.length})`;
-        break;
-      case 'null':
-        displayValue = `${blue('null')}`;
-        break;
-      case 'number':
-        displayType = Number.isInteger(originalValue) ? 'int' : 'float';
-        displayValue = green(originalValue);
-        break;
-      case 'function':
-        displayType = '';
-        displayValue = 'function () {}';
-        break;
-      case 'regexp':
-        displayType = '';
-        displayValue = `${blue(originalValue)}`;
-        break;
-      default:
-        displayType = '';
-        displayValue = originalValue;
-        break;
+
+    if (paramType === 'array' || paramType === 'object') {
+      const displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
+
+      return `${displayValue}`;
     }
 
-    return `${cyan(displayType)} ${displayValue}`;
+    if (paramType === 'boolean') {
+      const displayValue = originalValue ? magenta('true') : magenta('false');
+
+      return `${cyan(paramType)} ${displayValue}`;
+    }
+
+    if (paramType === 'string') {
+      const displayValue = `${red(`"${originalValue}"`)} (length=${originalValue.length})`;
+
+      return `${cyan(paramType)} ${displayValue}`;
+    }
+
+    if (paramType === 'null') {
+      return `${blue(paramType)}`;
+    }
+
+    if (paramType === 'number') {
+      const displayType = Number.isInteger(originalValue) ? 'int' : 'float';
+
+      return `${cyan(displayType)} ${green(originalValue)}`;
+    }
+
+    if (paramType === 'function') {
+      return 'function () {}';
+    }
+
+    if (paramType === 'regexp') {
+      return `${blue(originalValue)}`;
+    }
+
+    return originalValue;
   }
 
   /**
