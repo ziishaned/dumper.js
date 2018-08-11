@@ -64,7 +64,7 @@ const users = [
 
 dump(users);
 
-// Above variable will be printed and process will continue
+// Above variable will be printed and the process will continue
 console.log('this will be called');
 ```
 
