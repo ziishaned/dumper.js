@@ -1,7 +1,6 @@
 const kindOf = require('kind-of');
 const {decycle} = require('cycle');
 const {red, cyan, blue, black, green, magenta} = require('kleur');
-const dayjs = require('dayjs');
 
 /**
  * Generate structured information about one or more objects that
@@ -101,10 +100,6 @@ class Dumper {
       case 'regexp':
         displayType = '';
         displayValue = blue(originalValue);
-        break;
-      case 'date':
-        displayType = 'date';
-        displayValue = green(dayjs(originalValue).format('YYYY/MM/DDTHH:mm:ss.SSS'));
         break;
       default:
         displayType = '';
