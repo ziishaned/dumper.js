@@ -139,8 +139,8 @@ describe('Dump class tests', () => {
     };
 
     const expectedOutput = `object (size=2) {
-    'createAt' => date 2018 08-13T08:00:00.000,
-    'updateAt' => date 2018 08-13T08:00:00.000,
+    'createAt' => date 2018/08/13T08:00:00.000,
+    'updateAt' => date 2018/08/13T08:00:00.000,
 }`;
     assert.equal(generateDump(dateRange), expectedOutput);
   });

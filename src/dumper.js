@@ -102,7 +102,7 @@ class Dumper {
         break;
       case 'date':
         displayType = 'date';
-        displayValue = green(dayjs(originalValue).format('YYYY MM-DDTHH:mm:ss.SSS'));
+        displayValue = green(dayjs(originalValue).format('YYYY/MM/DDTHH:mm:ss.SSS'));
         break;
       default:
         displayType = '';
