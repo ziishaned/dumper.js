@@ -131,4 +131,18 @@ describe('Dump class tests', () => {
 
     assert.equal(generateDump(carDetails), expectedOutput);
   });
+
+  it('can dump date values', () => {
+    const dateRange = {
+      createAt: new Date('2018-08-13 00:00:00.000'),
+      updateAt: new Date('2018-08-13 00:00:00.000'),
+    };
+
+    const expectedOutput = `object (size=2) {
+    'createAt' => date 2018/08/13T00:00:00.000,
+    'updateAt' => date 2018/08/13T00:00:00.000,
+}`;
+    assert.equal(generateDump(dateRange), expectedOutput);
+  });
+
 });

@@ -1,5 +1,6 @@
 const kindOf = require('kind-of');
 const {red, cyan, blue, black, green, magenta} = require('kleur');
+const dayjs = require('dayjs');
 
 /**
  * Generate structured information about one or more objects that
@@ -78,14 +79,14 @@ class Dumper {
         break;
       case 'boolean':
         displayType = 'boolean';
-        displayValue = originalValue ? magenta('true') : magenta('false');
+        displayValue = magenta(`${originalValue}`);
         break;
       case 'string':
         displayType = 'string';
         displayValue = `${red(`"${originalValue}"`)} (length=${originalValue.length})`;
         break;
       case 'null':
-        displayValue = `${blue('null')}`;
+        displayValue = blue('null');
         break;
       case 'number':
         displayType = Number.isInteger(originalValue) ? 'int' : 'float';
@@ -97,7 +98,11 @@ class Dumper {
         break;
       case 'regexp':
         displayType = '';
-        displayValue = `${blue(originalValue)}`;
+        displayValue = blue(originalValue);
+        break;
+      case 'date':
+        displayType = 'date';
+        displayValue = green(dayjs(originalValue).format('YYYY/MM/DDTHH:mm:ss.SSS'));
         break;
       default:
         displayType = '';
