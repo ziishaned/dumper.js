@@ -1,6 +1,6 @@
 const kindOf = require('kind-of');
-const {red, cyan, blue, black, green, magenta} = require('kleur');
 const {decycle} = require('cycle');
+const {red, cyan, blue, black, green, magenta} = require('kleur');
 
 /**
  * Generate structured information about one or more objects that
