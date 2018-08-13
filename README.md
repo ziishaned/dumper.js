@@ -49,6 +49,8 @@ Will output below result and kill the process
 
 ![dd](https://i.imgur.com/iKIel4s.png)
 
+Inspired by Laravel's Helper [dd()](https://laravel.com/docs/5.6/helpers#method-dd)
+
 ### `dump()` Dump and Continue
 
 Calling `dump()` prints the output and continues with the processing
@@ -71,6 +73,8 @@ console.log('this will be called');
 Will output below result and continue processing
 
 ![dump](https://i.imgur.com/x048cf6.png)
+
+Inspired by Laravel's Helper [dump()](https://laravel.com/docs/5.6/helpers#method-dump)
 
 ## Contributions
 
