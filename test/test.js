@@ -132,17 +132,39 @@ describe('Dump class tests', () => {
     assert.equal(generateDump(carDetails), expectedOutput);
   });
 
-  it('can dump date values', () => {
-    const dateRange = {
-      createAt: new Date('2018-08-13 00:00:00.000'),
-      updateAt: new Date('2018-08-13 00:00:00.000'),
+  it('can dump cycled object', () => {
+    const mainNode = {};
+    const rightNode = {
+      left: mainNode,
+      right: null,
     };
+    mainNode.left = mainNode;
+    mainNode.right = rightNode;
 
     const expectedOutput = `object (size=2) {
-    'createAt' => date 2018/08/13T00:00:00.000,
-    'updateAt' => date 2018/08/13T00:00:00.000,
+    'left' =>  object (size=1) {
+        '$ref' => string "$" (length=1),
+    },
+    'right' =>  object (size=2) {
+        'left' =>  object (size=1) {
+            '$ref' => string "$" (length=1),
+        },
+        'right' =>  null,
+    },
 }`;
-    assert.equal(generateDump(dateRange), expectedOutput);
+
+    assert.equal(generateDump(mainNode), expectedOutput);
   });
 
+  it('can dump object without hasOwnProperty', () => {
+    const weirdObject = {
+      hasOwnProperty: null,
+    };
+
+    const expectedOutput = `object (size=1) {
+    'hasOwnProperty' =>  null,
+}`;
+
+    assert.equal(generateDump(weirdObject), expectedOutput);
+  });
 });

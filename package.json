@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "caller-id": "^0.1.0",
-    "dayjs": "^1.7.5",
+    "cycle": "^1.0.3",
     "kind-of": "^6.0.2",
     "kleur": "^2.0.1"
   }

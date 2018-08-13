@@ -1,4 +1,5 @@
 const kindOf = require('kind-of');
+const {decycle} = require('cycle');
 const {red, cyan, blue, black, green, magenta} = require('kleur');
 const dayjs = require('dayjs');
 
@@ -35,6 +36,7 @@ class Dumper {
         endWith = `${indent}]`;
         break;
       case 'object':
+        toDump = decycle(toDump);
         startWith = `${black.bold('object')} (size=${Object.keys(toDump).length}) {\n`;
         endWith = `${indent}}`;
         break;
@@ -45,7 +47,7 @@ class Dumper {
     // For each key of the object, keep
     // preparing the inspection output
     for (let itemKey in toDump) {
-      if (!toDump.hasOwnProperty(itemKey)) {
+      if (!Object.prototype.hasOwnProperty.call(toDump, itemKey)) {
         continue;
       }
 
