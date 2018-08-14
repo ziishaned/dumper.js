@@ -89,6 +89,9 @@ class Dumper {
       case 'null':
         displayValue = blue('null');
         break;
+      case 'undefined':
+        displayValue = blue('undefined');
+        break;
       case 'number':
         displayType = Number.isInteger(originalValue) ? 'int' : 'float';
         displayValue = green(originalValue);
