@@ -122,6 +122,7 @@ class Dumper {
   makeArrowString(paramType, indent, key, valueDump) {
     const startWith =  `${indent}${this.spaces}`;
     const v = ` => ${valueDump},\n`;
+    
     const k = Number.isInteger(parseInt(key)) || (paramType === 'array' && typeof key !== 'string') 
       ? `[${key}]` 
       : `'${key}'`;
