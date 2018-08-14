@@ -40,26 +40,26 @@ describe('Dump class tests', () => {
 
   it('can dump function values inside object', () => {
     const users = [
-      {user: 'barney', age: 36, active: true, getAge: () => this.age},
-      {user: 'fred', age: 40, active: false, getAge: () => this.age},
-      {user: 'pebbles', age: 1, active: true, getAge: () => this.age},
+      {user: 'Bob "Bobby" Jones', age: 36, active: true, getAge: () => this.age},
+      {user: 'Fred', age: 40, active: false, getAge: () => this.age},
+      {user: 'Pebbles', age: 1, active: true, getAge: () => this.age},
     ];
 
     const expectedOutput = `array (size=3) [
     [0] => object (size=4) {
-        user => string barney (length=6),
+        user => string Bob "Bobby" Jones (length=17),
         age => int 36,
         active => boolean true,
         getAge => function () => this.age,
     },
     [1] => object (size=4) {
-        user => string fred (length=4),
+        user => string Fred (length=4),
         age => int 40,
         active => boolean false,
         getAge => function () => this.age,
     },
     [2] => object (size=4) {
-        user => string pebbles (length=7),
+        user => string Pebbles (length=7),
         age => int 1,
         active => boolean true,
         getAge => function () => this.age,
