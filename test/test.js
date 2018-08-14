@@ -92,6 +92,7 @@ describe('Dump class tests', () => {
       null,
       false,
     ];
+    weekdays.meta = true
 
     const expectedOutput = `array (size=11) [
     [0] => string sunday (length=6),
@@ -105,6 +106,7 @@ describe('Dump class tests', () => {
     [8] => string saturday (length=8),
     [9] => null,
     [10] => boolean false,
+    meta => boolean true,
 ]`;
 
     assert.equal(generateDump(weekdays), expectedOutput);
