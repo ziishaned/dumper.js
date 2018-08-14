@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const callerId = require('caller-id');
 
-let Dumper = require('./dumper');
+const Dumper = require('./dumper');
 
 function dd(obj) {
   const dumper = new Dumper();
