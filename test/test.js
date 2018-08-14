@@ -9,6 +9,29 @@ describe('Dump class tests', () => {
     return dumper.generateDump(item).replace(/\u001b\[.*?m/g, '');
   }
 
+  it('itemKey is own property', () => {
+    const car = {
+      color: 'red',
+      wheels: 4,
+      engine: {
+        cylinders: 4,
+        size: 2.2,
+      },
+    };
+    car.constructor.prototype.owner = 'anyone';
+
+    const expectedOutput = `object (size=3) {
+    'color' => string "red" (length=3),
+    'wheels' => int 4,
+    'engine' =>  object (size=2) {
+        'cylinders' => int 4,
+        'size' => float 2.2,
+    },
+}`;
+
+    assert.equal(generateDump(car), expectedOutput);
+  });
+
   it('can dump strings', () => {
     const stringsToTest = [
       'list of strings',
@@ -73,8 +96,11 @@ describe('Dump class tests', () => {
     assert.equal(generateDump(users), expectedOutput);
   });
 
-  it('can dump null/undefined values', () => {
+  it('can dump null values', () => {
     assert.equal(generateDump(null), ' null');
+  });
+
+  it('can dump undefined values', () => {
     assert.equal(generateDump(undefined), ' undefined');
   });
 

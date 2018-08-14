@@ -45,7 +45,7 @@ class Dumper {
 
     // For each key of the object, keep
     // preparing the inspection output
-    for (let itemKey in toDump) {
+    for (const itemKey in toDump) {
       if (!Object.prototype.hasOwnProperty.call(toDump, itemKey)) {
         continue;
       }
