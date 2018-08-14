@@ -167,4 +167,20 @@ describe('Dump class tests', () => {
 
     assert.equal(generateDump(weirdObject), expectedOutput);
   });
+
+  it('can replace console.log', () => {
+    const logs = [];
+
+    const log = console.log;
+
+    console.log = (...args) => logs.push(args);
+
+    require('../src/global');
+
+    console.log(true);
+
+    console.log = log;
+
+    assert.equal(generateDump(true), logs[1][0].replace(/\u001b\[.*?m/g, ''));
+  });
 });

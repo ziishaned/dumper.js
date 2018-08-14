@@ -1,9 +1,12 @@
 /* eslint-disable no-console */
 const callerId = require('caller-id');
 
-let Dumper = require('./dumper');
+const Dumper = require('./dumper');
 
+// Temporarily store console.log function
 const log = console.log;
+
+// Override console.log with dump
 console.log = dump;
 
 function dump(obj) {
@@ -13,6 +16,7 @@ function dump(obj) {
   // Print the file path, line number and generated dump
   log(`${caller.filePath}:${caller.lineNumber}:`);
   log(dumper.generateDump(obj));
-}
 
-module.exports = dump;
+  // Revert console.log back to original function
+  console.log = log;
+}
