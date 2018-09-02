@@ -1,4 +1,4 @@
-.eslintrc # top-most EditorConfig file
+# top-most EditorConfig file
 root = true
 
 # Unix-style newlines with a newline ending every file
@@ -12,13 +12,5 @@ tab_width = 2
 
 # Indentation override for all JS under lib directory
 [*.js]
-indent_style = space
-indent_size = 2
 trim_trailing_whitespace = true
-insert_final_newline = true
-max_line_length = 100
-
-# Indentation override for all yml files
-[*.yml]
-indent_style = space
-indent_size = 2
+max_line_length = 120
