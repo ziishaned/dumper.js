@@ -73,8 +73,11 @@ describe('Dump class tests', () => {
     assert.equal(generateDump(users), expectedOutput);
   });
 
-  it('can dump null/undefined values', () => {
+  it('can dump null values', () => {
     assert.equal(generateDump(null), ' null');
+  });
+
+  it('can dump undefined values', () => {
     assert.equal(generateDump(undefined), ' undefined');
   });
 
