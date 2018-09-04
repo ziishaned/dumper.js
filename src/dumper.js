@@ -123,19 +123,17 @@ class Dumper {
    * @return {string}
    */
   makeArrowString(paramType, indent, key, valueDump) {
-    if (paramType === 'array') {
-      if (typeof key === 'string') {
-        return `${indent}${this.spaces}'${key}' => ${valueDump},\n`;
-      }
+    const startWith = `${indent}${this.spaces}`;
+    const valuePart = `${valueDump},\n`;
 
-      return `${indent}${this.spaces}[${key}] => ${valueDump},\n`;
+    let keyPart;
+    if (Number.isInteger(parseInt(key)) || (paramType === 'array' && typeof key !== 'string')) {
+      keyPart = `[${key}]`;
+    } else {
+      keyPart = `'${key}'`;
     }
 
-    if (Number.isInteger(parseInt(key))) {
-      return `${indent}${this.spaces}[${key}] => ${valueDump},\n`;
-    }
-
-    return `${indent}${this.spaces}'${key}' => ${valueDump},\n`;
+    return `${startWith + keyPart} => ${valuePart}`;
   }
 }
 
