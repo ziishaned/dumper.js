@@ -1,13 +1,13 @@
 <h1 align="center">
-	<img height="150" src="https://cdn.rawgit.com/zeeshanu/dumper.js/master/logo.svg" alt="Dumper.js - Dumps information about a variable" />
+	<img height="150" src="https://cdn.rawgit.com/ziishaned/dumper.js/master/logo.svg" alt="Dumper.js - Dumps information about a variable" />
 	<br> Dumper.js
 </h1>
 <p align="center">
-	<a href="https://travis-ci.org/zeeshanu/dumper.js">
-		<img src="https://img.shields.io/travis/zeeshanu/dumper.js/master.svg?style=flat-square" alt="Build Status">
+	<a href="https://travis-ci.org/ziishaned/dumper.js">
+		<img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg?style=flat-square" alt="Build Status">
 	</a>
-	<a href="https://github.com/zeeshanu/dumper.js">
-		<img src="https://img.shields.io/codecov/c/github/zeeshanu/dumper.js.svg?style=flat-square" alt="Codecov">
+	<a href="https://github.com/ziishaned/dumper.js">
+		<img src="https://img.shields.io/codecov/c/github/ziishaned/dumper.js.svg?style=flat-square" alt="Codecov">
 	</a>
 	<a href="#">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
@@ -78,4 +78,4 @@ Feel free to submit pull requests, create issues or spread the word.
 
 ## License
 
-MIT &copy; [Zeeshan Ahmed](https://twitter.com/zeeshanu)
+MIT &copy; [Zeeshan Ahmad](https://twitter.com/ziishaned)
