@@ -11,9 +11,14 @@ const {red, cyan, blue, black, green, magenta} = require('kleur');
 class Dumper {
   /**
    * @param {int} indentCount Number of spaces to indent the object with
+   * @param {bool} useTabs Use tabs instead of spaces for indentation
    */
-  constructor(indentCount = 4) {
-    this.spaces = ' '.repeat(indentCount);
+  constructor(indentCount = 4, useTabs = false) {
+    if (useTabs === true) {
+      this.spaces = String.fromCharCode(0x09) // Tab character
+    } else { 
+      this.spaces = ' '.repeat(indentCount);
+    }
   }
 
   /**
