@@ -1,6 +1,6 @@
 {
   "name": "dumper.js",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A better and pretty variable inspector for your Node.js applications.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeeshanu/dumper.js.git"
+    "url": "git+https://github.com/ziishaned/dumper.js.git"
   },
   "keywords": [
     "dd",
@@ -21,9 +21,9 @@
   "author": "Zeeshan Ahmad <ziishaned@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zeeshanu/dumper.js/issues"
+    "url": "https://github.com/ziishaned/dumper.js/issues"
   },
-  "homepage": "https://github.com/zeeshanu/dumper.js#readme",
+  "homepage": "https://github.com/ziishaned/dumper.js#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "codecov": "^3.1.0",
