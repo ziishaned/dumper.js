@@ -1,6 +1,6 @@
 const kindOf = require('kind-of');
 const {decycle} = require('cycle');
-const {red, cyan, blue, black, green, magenta} = require('kleur');
+const {red, cyan, blue, black, green, magenta, bold} = require('kleur');
 
 /**
  * Generate structured information about one or more objects that
@@ -31,12 +31,12 @@ class Dumper {
 
     switch (kindOf(toDump)) {
       case 'array':
-        startWith = `${black.bold('array')} (size=${toDump.length}) [\n`;
+        startWith = `${bold().black('array')} (size=${toDump.length}) [\n`;
         endWith = `${indent}]`;
         break;
       case 'object':
         toDump = decycle(toDump);
-        startWith = `${black.bold('object')} (size=${Object.keys(toDump).length}) {\n`;
+        startWith = `${bold().black('object')} (size=${Object.keys(toDump).length}) {\n`;
         endWith = `${indent}}`;
         break;
       default:
