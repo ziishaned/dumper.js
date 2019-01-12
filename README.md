@@ -15,7 +15,7 @@
   <a href="https://twitter.com/ziishaned">
     <img src="https://img.shields.io/badge/feedback-@ziishaned-blue.svg?style=flat-square" />
   </a>
-	<a href="#">
+	<a href="https://github.com/ziishaned/dumper.js">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
 	</a>
 </p>
