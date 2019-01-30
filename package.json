@@ -4,7 +4,7 @@
   "description": "A better and pretty variable inspector for your Node.js applications.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha && ./node_modules/.bin/codecov",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/jest && ./node_modules/.bin/codecov",
     "prettier": "prettier --write src/*.js"
   },
   "repository": {
@@ -25,11 +25,10 @@
   },
   "homepage": "https://github.com/ziishaned/dumper.js#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
     "codecov": "^3.1.0",
     "eslint": "^5.12.1",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0",
+    "jest": "^24.0.0",
     "prettier": "^1.16.2"
   },
   "dependencies": {

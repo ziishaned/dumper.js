@@ -1,45 +1,38 @@
-/* eslint-disable no-console */
-const assert = require('chai').assert;
-
 const Dumper = require('../src/dumper');
 
 describe('Dump class tests', () => {
-  function generateDump(item) {
+  generateDump = (item) => {
     const dumper = new Dumper();
     return dumper.generateDump(item).replace(/\u001b\[.*?m/g, '');
-  }
+  };
 
   it('can dump strings', () => {
-    const stringsToTest = [
-      'list of strings',
-      '',
-      ' ',
-    ];
+    const stringsToTest = ['list of strings', '', ' '];
 
     stringsToTest.forEach((toTest) => {
       const actualDump = generateDump(toTest);
       const expectedDump = `string "${toTest}" (length=${toTest.length})`;
 
-      assert.equal(actualDump, expectedDump);
+      expect(actualDump).toStrictEqual(expectedDump);
     });
   });
 
   it('can dump boolean values', () => {
-    assert.equal(generateDump(true), 'boolean true');
-    assert.equal(generateDump(false), 'boolean false');
+    expect(generateDump(true)).toStrictEqual('boolean true');
+    expect(generateDump(false)).toStrictEqual('boolean false');
   });
 
   it('can dump numeric values', () => {
     const numbers = [23, 2, 0, 11.1, -1, -12.2, -9.22, -0.9];
 
-    numbers.forEach(number => {
+    numbers.forEach((number) => {
       const type = Number.isInteger(number) ? 'int' : 'float';
-      assert.equal(generateDump(number), `${type} ${number}`);
+      expect(generateDump(number)).toStrictEqual(`${type} ${number}`);
     });
   });
 
   it('can dump regex values', () => {
-    assert.equal(generateDump(/[0-9]+/), ' /[0-9]+/');
+    expect(generateDump(/[0-9]+/)).toStrictEqual(' /[0-9]+/');
   });
 
   it('can dump function values inside object', () => {
@@ -70,15 +63,15 @@ describe('Dump class tests', () => {
     },
 ]`;
 
-    assert.equal(generateDump(users), expectedOutput);
+    expect(generateDump(users)).toStrictEqual(expectedOutput);
   });
 
   it('can dump null values', () => {
-    assert.equal(generateDump(null), ' null');
+    expect(generateDump(null)).toStrictEqual(' null');
   });
 
   it('can dump undefined values', () => {
-    assert.equal(generateDump(undefined), ' undefined');
+    expect(generateDump(undefined)).toStrictEqual(' undefined');
   });
 
   it('can dump array values', () => {
@@ -110,7 +103,7 @@ describe('Dump class tests', () => {
     [10] => boolean false,
 ]`;
 
-    assert.equal(generateDump(weekdays), expectedOutput);
+    expect(generateDump(weekdays)).toStrictEqual(expectedOutput);
   });
 
   it('can dump object values', () => {
@@ -132,7 +125,7 @@ describe('Dump class tests', () => {
     },
 }`;
 
-    assert.equal(generateDump(carDetails), expectedOutput);
+    expect(generateDump(carDetails)).toStrictEqual(expectedOutput);
   });
 
   it('can dump cycled object', () => {
@@ -156,7 +149,7 @@ describe('Dump class tests', () => {
     },
 }`;
 
-    assert.equal(generateDump(mainNode), expectedOutput);
+    expect(generateDump(mainNode)).toStrictEqual(expectedOutput);
   });
 
   it('can dump object without hasOwnProperty', () => {
@@ -168,6 +161,6 @@ describe('Dump class tests', () => {
     'hasOwnProperty' =>  null,
 }`;
 
-    assert.equal(generateDump(weirdObject), expectedOutput);
+    expect(generateDump(weirdObject)).toStrictEqual(expectedOutput);
   });
 });
