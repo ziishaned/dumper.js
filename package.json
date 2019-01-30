@@ -30,7 +30,7 @@
     "eslint": "^5.12.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.2"
   },
   "dependencies": {
     "caller-id": "^0.1.0",
