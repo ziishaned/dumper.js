@@ -32,7 +32,7 @@ describe('Dump class tests', () => {
   });
 
   it('can dump regex values', () => {
-    expect(generateDump(/[0-9]+/)).toStrictEqual(' /[0-9]+/');
+    expect(generateDump(/[0-9]+/)).toStrictEqual('/[0-9]+/');
   });
 
   it('can dump function values inside object', () => {
@@ -43,23 +43,23 @@ describe('Dump class tests', () => {
     ];
 
     const expectedOutput = `array (size=3) [
-    [0] =>  object (size=4) {
+    [0] => object (size=4) {
         'user' => string "barney" (length=6),
         'age' => int 36,
         'active' => boolean true,
-        'getAge' =>  function () {},
+        'getAge' => () => this.age,
     },
-    [1] =>  object (size=4) {
+    [1] => object (size=4) {
         'user' => string "fred" (length=4),
         'age' => int 40,
         'active' => boolean false,
-        'getAge' =>  function () {},
+        'getAge' => () => this.age,
     },
-    [2] =>  object (size=4) {
+    [2] => object (size=4) {
         'user' => string "pebbles" (length=7),
         'age' => int 1,
         'active' => boolean true,
-        'getAge' =>  function () {},
+        'getAge' => () => this.age,
     },
 ]`;
 
@@ -67,11 +67,11 @@ describe('Dump class tests', () => {
   });
 
   it('can dump null values', () => {
-    expect(generateDump(null)).toStrictEqual(' null');
+    expect(generateDump(null)).toStrictEqual('null');
   });
 
   it('can dump undefined values', () => {
-    expect(generateDump(undefined)).toStrictEqual(' undefined');
+    expect(generateDump(undefined)).toStrictEqual('undefined');
   });
 
   it('can dump array values', () => {
@@ -99,7 +99,7 @@ describe('Dump class tests', () => {
     [6] => string "thursday" (length=8),
     [7] => string "friday" (length=6),
     [8] => string "saturday" (length=8),
-    [9] =>  null,
+    [9] => null,
     [10] => boolean false,
 ]`;
 
@@ -119,7 +119,7 @@ describe('Dump class tests', () => {
     const expectedOutput = `object (size=3) {
     'color' => string "red" (length=3),
     'wheels' => int 4,
-    'engine' =>  object (size=2) {
+    'engine' => object (size=2) {
         'cylinders' => int 4,
         'size' => float 2.2,
     },
@@ -138,14 +138,14 @@ describe('Dump class tests', () => {
     mainNode.right = rightNode;
 
     const expectedOutput = `object (size=2) {
-    'left' =>  object (size=1) {
+    'left' => object (size=1) {
         '$ref' => string "$" (length=1),
     },
-    'right' =>  object (size=2) {
-        'left' =>  object (size=1) {
+    'right' => object (size=2) {
+        'left' => object (size=1) {
             '$ref' => string "$" (length=1),
         },
-        'right' =>  null,
+        'right' => null,
     },
 }`;
 
@@ -158,7 +158,7 @@ describe('Dump class tests', () => {
     };
 
     const expectedOutput = `object (size=1) {
-    'hasOwnProperty' =>  null,
+    'hasOwnProperty' => null,
 }`;
 
     expect(generateDump(weirdObject)).toStrictEqual(expectedOutput);

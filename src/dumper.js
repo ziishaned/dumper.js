@@ -1,6 +1,6 @@
 const kindOf = require('kind-of');
 const {decycle} = require('cycle');
-const {red, cyan, blue, black, green, magenta, bold} = require('kleur');
+const {red, cyan, blue, green, magenta, bold} = require('kleur');
 
 /**
  * Generate structured information about one or more objects that
@@ -68,11 +68,10 @@ class Dumper {
    * @return {*|string}
    */
   prepareValueDump(indent, originalValue) {
-    let displayType = '';
     let displayValue = '';
+    let displayType = kindOf(originalValue);
 
-    const paramType = kindOf(originalValue);
-    switch (paramType) {
+    switch (displayType) {
       case 'array':
       case 'object':
         displayType = '';
@@ -87,9 +86,11 @@ class Dumper {
         displayValue = `${red(`"${originalValue}"`)} (length=${originalValue.length})`;
         break;
       case 'null':
+        displayType = '';
         displayValue = blue('null');
         break;
       case 'undefined':
+        displayType = '';
         displayValue = blue('undefined');
         break;
       case 'number':
@@ -97,8 +98,9 @@ class Dumper {
         displayValue = green(originalValue);
         break;
       case 'function':
+      case 'generatorfunction':
         displayType = '';
-        displayValue = 'function () {}';
+        displayValue = this.formatFunction(originalValue);
         break;
       case 'regexp':
         displayType = '';
@@ -110,7 +112,23 @@ class Dumper {
         break;
     }
 
-    return `${cyan(displayType)} ${displayValue}`;
+    let spacer = displayType.length ? ' ' : '';
+
+    return `${cyan(displayType)}${spacer}${displayValue}`;
+  }
+
+  /**
+   * Format function to log it inside the console.
+   *
+   * @param {*} originalValue
+   * @return {string}
+   */
+  formatFunction(originalValue) {
+    return originalValue
+      .toString()
+      .slice(0, 50)
+      .replace(/\n/g, '')
+      .replace(/\s+/g, ' ');
   }
 
   /**
