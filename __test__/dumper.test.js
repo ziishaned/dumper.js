@@ -11,7 +11,7 @@ describe('Dump class tests', () => {
 
     stringsToTest.forEach((toTest) => {
       const actualDump = generateDump(toTest);
-      const expectedDump = `string "${toTest}" (length=${toTest.length})`;
+      const expectedDump = `string ${toTest} (length=${toTest.length})`;
 
       expect(actualDump).toStrictEqual(expectedDump);
     });
@@ -37,29 +37,29 @@ describe('Dump class tests', () => {
 
   it('can dump function values inside object', () => {
     const users = [
-      {user: 'barney', age: 36, active: true, getAge: () => this.age},
-      {user: 'fred', age: 40, active: false, getAge: () => this.age},
-      {user: 'pebbles', age: 1, active: true, getAge: () => this.age},
+      {user: 'Bob "Bobby" Jones', age: 36, active: true, getAge: () => this.age},
+      {user: 'Fred', age: 40, active: false, getAge: () => this.age},
+      {user: 'Pebbles', age: 1, active: true, getAge: () => this.age},
     ];
 
     const expectedOutput = `array (size=3) [
-    [0] =>  object (size=4) {
-        'user' => string "barney" (length=6),
-        'age' => int 36,
-        'active' => boolean true,
-        'getAge' =>  function () {},
+    [0] => object (size=4) {
+        user => string Bob "Bobby" Jones (length=17),
+        age => int 36,
+        active => boolean true,
+        getAge => function () => this.age,
     },
-    [1] =>  object (size=4) {
-        'user' => string "fred" (length=4),
-        'age' => int 40,
-        'active' => boolean false,
-        'getAge' =>  function () {},
+    [1] => object (size=4) {
+        user => string Fred (length=4),
+        age => int 40,
+        active => boolean false,
+        getAge => function () => this.age,
     },
-    [2] =>  object (size=4) {
-        'user' => string "pebbles" (length=7),
-        'age' => int 1,
-        'active' => boolean true,
-        'getAge' =>  function () {},
+    [2] => object (size=4) {
+        user => string Pebbles (length=7),
+        age => int 1,
+        active => boolean true,
+        getAge => function () => this.age,
     },
 ]`;
 
@@ -88,19 +88,21 @@ describe('Dump class tests', () => {
       null,
       false,
     ];
+    weekdays.meta = true
 
     const expectedOutput = `array (size=11) [
-    [0] => string "sunday" (length=6),
-    [1] => string "monday" (length=6),
+    [0] => string sunday (length=6),
+    [1] => string monday (length=6),
     [2] => int 1,
     [3] => boolean true,
-    [4] => string "tuesday" (length=7),
-    [5] => string "wednesday" (length=9),
-    [6] => string "thursday" (length=8),
-    [7] => string "friday" (length=6),
-    [8] => string "saturday" (length=8),
-    [9] =>  null,
+    [4] => string tuesday (length=7),
+    [5] => string wednesday (length=9),
+    [6] => string thursday (length=8),
+    [7] => string friday (length=6),
+    [8] => string saturday (length=8),
+    [9] => null,
     [10] => boolean false,
+    meta => boolean true,
 ]`;
 
     expect(generateDump(weekdays)).toStrictEqual(expectedOutput);
@@ -117,11 +119,11 @@ describe('Dump class tests', () => {
     };
 
     const expectedOutput = `object (size=3) {
-    'color' => string "red" (length=3),
-    'wheels' => int 4,
-    'engine' =>  object (size=2) {
-        'cylinders' => int 4,
-        'size' => float 2.2,
+    color => string red (length=3),
+    wheels => int 4,
+    engine => object (size=2) {
+        cylinders => int 4,
+        size => float 2.2,
     },
 }`;
 
@@ -138,14 +140,14 @@ describe('Dump class tests', () => {
     mainNode.right = rightNode;
 
     const expectedOutput = `object (size=2) {
-    'left' =>  object (size=1) {
-        '$ref' => string "$" (length=1),
+    left => object (size=1) {
+        $ref => string $ (length=1),
     },
-    'right' =>  object (size=2) {
-        'left' =>  object (size=1) {
-            '$ref' => string "$" (length=1),
+    right => object (size=2) {
+        left => object (size=1) {
+            $ref => string $ (length=1),
         },
-        'right' =>  null,
+        right => null,
     },
 }`;
 
@@ -158,7 +160,7 @@ describe('Dump class tests', () => {
     };
 
     const expectedOutput = `object (size=1) {
-    'hasOwnProperty' =>  null,
+    hasOwnProperty => null,
 }`;
 
     expect(generateDump(weirdObject)).toStrictEqual(expectedOutput);
