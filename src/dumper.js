@@ -13,10 +13,15 @@ class Dumper {
    * @param {object} opts
    */
   constructor(opts) {
-    let indentCount = opts.indent || 4; //indentCount Number of spaces to indent the object with
-    this.spaces = ' '.repeat(indentCount);
+    let defaults = {
+      indent: 4,
+      depth: false
+    };
+
+    let options = Object.assign({}, defaults, opts);
+    this.spaces = ' '.repeat(options.indent); //Number of spaces to indent the object with
     this.currentDepth = 0;
-    this.depth = opts.depth || null; // depth to show
+    this.depth = options.depth; // depth to show
   }
 
   /**
@@ -57,9 +62,6 @@ class Dumper {
       const originalParamType = kindOf(originalValue);
       const valueDump = this.prepareValueDump(indent, originalValue);
 
-      if(this.depth != null)
-        this.currentDepth--;
-
       dump += this.makeArrowString(originalParamType, indent, itemKey, valueDump);
     }
 
@@ -82,13 +84,12 @@ class Dumper {
       case 'array':
       case 'object':
         displayType = '';
-        if(this.depth != null && this.currentDepth == this.depth) {
+        if(this.depth && this.currentDepth == this.depth) {
           displayValue = `${bold().black('object')} (size=${Object.keys(originalValue).length})`;
         } else {
-          if(this.depth != null)
-            this.currentDepth++
-          
-            displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
+          this.incrementDepth()
+          displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
+          this.decrementDepth()
         }
         break;
       case 'boolean':
@@ -147,6 +148,21 @@ class Dumper {
     }
 
     return `${startWith + keyPart} => ${valuePart}`;
+  }
+  
+  /**
+   * Increment currentDepth
+   */
+  incrementDepth() {
+    if(this.depth)
+      this.currentDepth++
+  }
+  /**
+   * Decrement currentDepth
+   */
+  decrementDepth() {
+    if(this.depth)
+      this.currentDepth--
   }
 }
 
