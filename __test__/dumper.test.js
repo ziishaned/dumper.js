@@ -1,8 +1,8 @@
 const Dumper = require('../src/dumper');
 
 describe('Dump class tests', () => {
-  generateDump = (item) => {
-    const dumper = new Dumper();
+  generateDump = (item, opts) => {
+    const dumper = new Dumper(opts);
     return dumper.generateDump(item).replace(/\u001b\[.*?m/g, '');
   };
 
@@ -163,4 +163,109 @@ describe('Dump class tests', () => {
 
     expect(generateDump(weirdObject)).toStrictEqual(expectedOutput);
   });
+
+  it('dump with depth 1', () => {
+    const obj = {
+      a: {
+        b: {
+          c: {
+            a1: "a1",
+            a2: 2,
+            a3: false,
+          },
+          d: ["one", "two"]
+        }
+      },
+      str: "string",
+      num: 10,
+      bool: true
+    };
+    
+
+    const expectedOutput = `object (size=4) {
+    'a' =>  object (size=1) {
+        'b' =>  object (size=2),
+    },
+    'str' => string "string" (length=6),
+    'num' => int 10,
+    'bool' => boolean true,
+}`;
+  
+   expect(generateDump(obj, {depth: 1})).toStrictEqual(expectedOutput);
+  });
+
+  it('dump with depth 2', () => {
+    const obj = {
+      a: {
+        b: {
+          c: {
+            a1: "a1",
+            a2: 2,
+            a3: false,
+          },
+          d: ["one", "two"]
+        }
+      },
+      str: "string",
+      num: 10,
+      bool: true
+    };
+    
+
+    const expectedOutput = `object (size=4) {
+    'a' =>  object (size=1) {
+        'b' =>  object (size=2) {
+            'c' =>  object (size=3),
+            'd' =>  object (size=2),
+        },
+    },
+    'str' => string "string" (length=6),
+    'num' => int 10,
+    'bool' => boolean true,
+}`;
+  
+   expect(generateDump(obj, {depth: 2})).toStrictEqual(expectedOutput);
+  });
+
+
+  it('dump with depth 3', () => {
+    const obj = {
+      a: {
+        b: {
+          c: {
+            a1: "a1",
+            a2: 2,
+            a3: false,
+          },
+          d: ["one", "two"]
+        }
+      },
+      str: "string",
+      num: 10,
+      bool: true
+    };
+    
+
+    const expectedOutput = `object (size=4) {
+    'a' =>  object (size=1) {
+        'b' =>  object (size=2) {
+            'c' =>  object (size=3) {
+                'a1' => string "a1" (length=2),
+                'a2' => int 2,
+                'a3' => boolean false,
+            },
+            'd' =>  array (size=2) [
+                [0] => string "one" (length=3),
+                [1] => string "two" (length=3),
+            ],
+        },
+    },
+    'str' => string "string" (length=6),
+    'num' => int 10,
+    'bool' => boolean true,
+}`;
+    //console.log(generateDump(obj, {depth: 3}))
+   expect(generateDump(obj, {depth: 3})).toStrictEqual(expectedOutput);
+});
+
 });
