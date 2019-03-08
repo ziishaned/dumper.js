@@ -3,8 +3,8 @@ const callerId = require('caller-id');
 
 const Dumper = require('./dumper');
 
-function dd(obj) {
-  const dumper = new Dumper();
+function dd(obj, opts) {
+  const dumper = new Dumper(opts);
   const caller = callerId.getData();
 
   // Print the file path, line number and generated dump
