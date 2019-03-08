@@ -57,6 +57,9 @@ class Dumper {
       const originalParamType = kindOf(originalValue);
       const valueDump = this.prepareValueDump(indent, originalValue);
 
+      if(this.depth != null)
+        this.currentDepth--;
+
       dump += this.makeArrowString(originalParamType, indent, itemKey, valueDump);
     }
 
@@ -79,7 +82,14 @@ class Dumper {
       case 'array':
       case 'object':
         displayType = '';
-        displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
+        if(this.depth != null && this.currentDepth == this.depth) {
+          displayValue = `${bold().black('object')} (size=${Object.keys(originalValue).length})`;
+        } else {
+          if(this.depth != null)
+            this.currentDepth++
+          
+            displayValue = this.generateDump(originalValue, `${indent}${this.spaces}`);
+        }
         break;
       case 'boolean':
         displayType = 'boolean';
