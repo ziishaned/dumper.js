@@ -10,10 +10,13 @@ const {red, cyan, blue, black, green, magenta, bold} = require('kleur');
  */
 class Dumper {
   /**
-   * @param {int} indentCount Number of spaces to indent the object with
+   * @param {object} opts
    */
-  constructor(indentCount = 4) {
+  constructor(opts) {
+    let indentCount = opts.indent || 4; //indentCount Number of spaces to indent the object with
     this.spaces = ' '.repeat(indentCount);
+    this.currentDepth = 0;
+    this.depth = opts.depth || null; // depth to show
   }
 
   /**
