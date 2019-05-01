@@ -25,16 +25,16 @@
   },
   "homepage": "https://github.com/ziishaned/dumper.js#readme",
   "devDependencies": {
-    "codecov": "^3.2.0",
-    "eslint": "^5.15.1",
+    "codecov": "^3.3.0",
+    "eslint": "^5.16.0",
     "istanbul": "^0.4.5",
-    "jest": "^24.5.0",
-    "prettier": "^1.16.4"
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0"
   },
   "dependencies": {
     "caller-id": "^0.1.0",
     "cycle": "^1.0.3",
     "kind-of": "^6.0.2",
-    "kleur": "^3.0.2"
+    "kleur": "^3.0.3"
   }
 }
