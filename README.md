@@ -51,7 +51,7 @@ dd(users);
 console.log('this will never be called');
 ```
 
-Will output below result and kill the process
+Will output below result and kill the process. [Demo](https://runkit.com/ziishaned/5cc95de6c01d42001ae5eed5)
 
 ![dd](https://i.imgur.com/iKIel4s.png)
 
@@ -59,7 +59,7 @@ Will output below result and kill the process
 
 Calling `dump()` prints the output and continues with the processing
 
-```javascript
+```js
 const { dump } = require('dumper.js');
 
 const users = [
@@ -74,7 +74,7 @@ dump(users);
 console.log('this will be called');
 ```
 
-Will output below result and continue processing
+Will output below result and continue processing. [Demo](https://runkit.com/ziishaned/5cc95f368838bf001bb9a6b1)
 
 ![dump](https://i.imgur.com/x048cf6.png)
 
