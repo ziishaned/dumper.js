@@ -6,6 +6,6 @@
   "trailingComma": "es5",
   "semi": true,
   "arrowParens": "always",
-  "parser": "babylon",
+  "parser": "babel",
   "bracketSpacing": false
 }
