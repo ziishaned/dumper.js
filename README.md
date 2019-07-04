@@ -9,6 +9,8 @@
 	<a href="https://github.com/ziishaned/dumper.js">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
 	</a>
+</p>
+<p align="center">
   <a href="https://twitter.com/ziishaned">
     <img src="https://img.shields.io/twitter/follow/ziishaned.svg?style=social" />
   </a>
