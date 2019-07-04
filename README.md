@@ -4,10 +4,10 @@
 </h1>
 <p align="center">
   <a href="https://travis-ci.org/ziishaned/dumper.js">
-		<img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg?style=flat-square" alt="Build Status">
+		<img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg" alt="Build Status">
 	</a>
 	<a href="https://github.com/ziishaned/dumper.js">
-		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
+		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
 	</a>
   <a href="https://twitter.com/ziishaned">
     <img src="https://img.shields.io/twitter/follow/ziishaned.svg?style=social" />
