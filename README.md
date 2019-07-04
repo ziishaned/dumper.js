@@ -7,17 +7,14 @@
 		<img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg?style=flat-square" alt="Build Status">
 	</a>
 	<a href="https://github.com/ziishaned/dumper.js">
-		<img src="https://img.shields.io/codecov/c/github/ziishaned/dumper.js.svg?style=flat-square" alt="Codecov">
-	</a>
-  <a href="https://twitter.com/home?status=dumper.js%20by%20%40ziishaned%20http%3A//github.com/ziishaned/dumper.js">
-    <img src="https://img.shields.io/badge/twitter-tweet-blue.svg?style=flat-square"/>
-  </a>
-  <a href="https://twitter.com/ziishaned">
-    <img src="https://img.shields.io/badge/feedback-@ziishaned-blue.svg?style=flat-square" />
-  </a>
-	<a href="https://github.com/ziishaned/dumper.js">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
 	</a>
+  <a href="https://twitter.com/ziishaned">
+    <img src="https://img.shields.io/twitter/follow/ziishaned.svg?style=social" />
+  </a>
+  <a href="https://github.com/ziishaned">
+    <img src="https://img.shields.io/github/followers/ziishaned.svg?label=Follow%20%40ziishaned&style=social" />
+  </a>
 </p>
 
 <p align="center"><code>dumper.js</code> is a better and pretty variable inspector for your Node.js applications.</p>
