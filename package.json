@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/jest && ./node_modules/.bin/codecov",
-    "prettier": "prettier --write src/*.js"
+    "prettier": "prettier --write src/*.js",
+    "postinstall": "opencollective-postinstall || true"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,11 @@
     "caller-id": "^0.1.0",
     "cycle": "^1.0.3",
     "kind-of": "^6.0.2",
-    "kleur": "^3.0.3"
+    "kleur": "^3.0.3",
+    "opencollective-postinstall": "^2.0.2"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/dumperjs"
   }
 }
