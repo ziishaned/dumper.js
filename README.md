@@ -4,7 +4,7 @@
 </h1>
 <p align="center">
   <a href="https://travis-ci.org/ziishaned/dumper.js">
-		<img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg" alt="Build Status">
+		<a href="https://opencollective.com/dumperjs" alt="Financial Contributors on Open Collective"><img src="https://opencollective.com/dumperjs/all/badge.svg?label=financial+contributors" /></a> <img src="https://img.shields.io/travis/ziishaned/dumper.js/master.svg" alt="Build Status">
 	</a>
 	<a href="https://github.com/ziishaned/dumper.js">
 		<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
@@ -80,6 +80,36 @@ Will output below result and continue processing. [Demo](https://runkit.com/ziis
 ## Contributions
 
 Feel free to submit pull requests, create issues or spread the word.
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/ziishaned/dumper.js/graphs/contributors"><img src="https://opencollective.com/dumperjs/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/dumperjs/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/dumperjs"><img src="https://opencollective.com/dumperjs/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/dumperjs/contribute)]
+
+<a href="https://opencollective.com/dumperjs/organization/0/website"><img src="https://opencollective.com/dumperjs/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/1/website"><img src="https://opencollective.com/dumperjs/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/2/website"><img src="https://opencollective.com/dumperjs/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/3/website"><img src="https://opencollective.com/dumperjs/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/4/website"><img src="https://opencollective.com/dumperjs/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/5/website"><img src="https://opencollective.com/dumperjs/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/6/website"><img src="https://opencollective.com/dumperjs/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/7/website"><img src="https://opencollective.com/dumperjs/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/8/website"><img src="https://opencollective.com/dumperjs/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/dumperjs/organization/9/website"><img src="https://opencollective.com/dumperjs/organization/9/avatar.svg"></a>
 
 ## License
 
