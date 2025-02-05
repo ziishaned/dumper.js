@@ -77,4 +77,4 @@ Feel free to submit pull requests, create issues or spread the word.
 
 ## License
 
-MIT &copy; [Zeeshan Ahmad](https://twitter.com/ziishaned)
+MIT &copy; Zeeshan Ahmad
